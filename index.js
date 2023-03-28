@@ -30,7 +30,7 @@ const password = process.env.DB_PASSWORD;
 
 
 const app = express()
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.use(xssclean())
 app.disable('x-powered-by');
